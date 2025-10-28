@@ -17,3 +17,27 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(PackToTheFuture)
 ```
+
+### Introduction
+
+lorem ipsum
+
+### Function 1
+
+Ákos types here.
+
+### Function 2
+
+Elvin types here.
+
+### Function 3
+
+Joshua types here.
+
+### Function 4
+
+Marcel types here.
+
+### Function 5
+
+Mikel types here.
