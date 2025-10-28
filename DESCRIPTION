@@ -8,23 +8,6 @@ Authors@R: c(
            family = "Lembeck", 
            email = "joshinsky@outlook.de", 
            role = c("aut", "cre"))
-=======
-Authors@R: 
-c(person(given = "Joshua",
-family = "Lembeck",
-email = "s253726@dtu.dk",
-role = c("aut", "cre")),
-person(given = "Ákos",
-family = "Kimpián",
-email = "s253718@dtu.dk",
-role = "aut")
-  )
-person(given = "Mikel",
-family = "Garcia",
-email = "s253702@dtu.dk",
-role = "aut")
-  )
->>>>>>> f3b29eddb9d888de6c06b5fc0a56247da220587c
 Description: The aim of these exercises is to set up a collaborative coding project using GitHub and collaborate on creating a simple R package that replicates the central dogma of molecular biology.
 License: usethis::use_mit_license("group13")
 Encoding: UTF-8
