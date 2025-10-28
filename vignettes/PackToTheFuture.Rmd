@@ -20,7 +20,7 @@ library(PackToTheFuture)
 
 ### Introduction
 
-lorem ipsum
+Everyone creates their own branch and edits their section. Joshua will do the introduction.
 
 ### Function 1
 
