@@ -40,7 +40,7 @@ Joshua types here.
 
 Function definition:
 
-```{r}
+``` r
 create_seq <- function(seq_size){
   seq_list <- sample(c("A", "T", "G", "C"), size = seq_size, replace = TRUE)
   seq_str <- paste0(seq_list, collapse = "")
@@ -60,7 +60,7 @@ A character string representing a DNA sequence.
 
 #### Example usage
 
-```         
+``` r
 # Generate a sequence of length 12
 seq1 <- create_seq(12)
 seq1
@@ -68,7 +68,7 @@ seq1
 
 Expected output format:
 
-```         
+``` r
 "ATGCGTACGTTA"
 ```
 
