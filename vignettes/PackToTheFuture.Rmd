@@ -38,7 +38,7 @@ The **`PackToTheFuture`** package is designed to streamline data-science workflo
 
 In the following, we will go through each function in the package one by one and show how to use them together in a workflow. Finally we discuss typical use cases and potential future enhancements.
 
-### Function 1 (`create_seq()`)
+### Function 1: `create_seq()`
 
 *Purpose*: Generate a random sequence composed of nucleotides A, T, G, and C.
 
@@ -78,7 +78,7 @@ Expected output format:
 
 Each call produces a new random sequence of the same general format.
 
-### Function 2
+### Function 2: `get_rna()`
 
 This function takes a DNA sequence and converts it into an RNA sequence by replacing "T" with "U".
 
@@ -143,7 +143,7 @@ codons_example2 <- get_codons(DNAseq, start = 2)
 #> [1] "TGG" "CCA" "TTG" "TAA" "TGG" "GCC" "GCT" "GAA" "AGG" "GTG" "CCC" "GAT"
 ```
 
-### Function 4 (`traduction_prot()`)
+### Function 4: `traduction_prot()`
 
 *Purpose*: Translate a vector of codons into a protein sequence using a predefined genetic code.
 
@@ -179,7 +179,7 @@ traduction_prot(cod_vec)
 "MTK"
 ```
 
-### Function 5: plot_base_freq
+### Function 5: `plot_base_freq()`
 
 A function that takes a sequence of nucleotides (DNA or RNA) and plots the number of occurences of each nucleotide in a barplot.
 
