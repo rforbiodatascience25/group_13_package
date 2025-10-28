@@ -133,6 +133,8 @@ traduction_prot(cod_vec)
 
 A function that takes a sequence of nucleotides (DNA or RNA) and plots the number of occurences of each nucleotide in a barplot.
 
+Packages are added in the DESCRIPTION file through `usethis::use_package()`. Also are added in the funcion's Roxygen Skeleton using importFrom and importing only the required function from the packages.
+
 #### Parameters
 
 seq: sequence of nucleotides as a string
