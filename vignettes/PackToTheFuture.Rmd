@@ -107,6 +107,16 @@ get_rna("ACTG")
 
 The `get_codons()` function takes a DNA sequence `seq` and splits it into triplet (codon) sections. The reading frame (starting position) is determined by the `start` argument. The generated codons can later be used to translate to amino acids.
 
+This function is useful for:
+
+-   Translating nucleotide sequences into amino acids (after codon extraction).
+
+-   Exploring open reading frames (ORFs).
+
+-   Checking for mutations that shift reading frames.
+
+#### Function definition
+
 ```{r}
 get_codons <- function(seq, start = 1){
   seq_len <- nchar(seq)
@@ -117,7 +127,7 @@ get_codons <- function(seq, start = 1){
 }
 ```
 
-**Example usage:**
+#### Example Usage
 
 ```{r}
 DNAseq <- "ATGGCCATTGTAATGGGCCGCTGAAAGGGTGCCCGATAG" 
@@ -130,14 +140,6 @@ codons_example1 <- get_codons(DNAseq)
 codons_example2 <- get_codons(DNAseq, start = 2)
 #> [1] "TGG" "CCA" "TTG" "TAA" "TGG" "GCC" "GCT" "GAA" "AGG" "GTG" "CCC" "GAT"
 ```
-
-This function is particularly useful in bioinformatics workflows for:
-
--   Translating nucleotide sequences into amino acids (after codon extraction).
-
--   Exploring open reading frames (ORFs).
-
--   Checking for mutations that shift reading frames.
 
 ### Function 4 (`traduction_prot()`)
 
@@ -155,7 +157,7 @@ traduction_prot <- function(codons){
 #### Parameters
 
 | Argument |               Type               |           Description           |
-|:-------------:|:-------------:|:----------------------------------------:|
+|:---------------:|:---------------:|:-------------------------------------:|
 |  codons  | character vector (of RNA codons) | The codon sequence to translate |
 
 #### Returns
