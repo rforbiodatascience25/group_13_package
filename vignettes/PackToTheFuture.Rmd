@@ -20,7 +20,21 @@ library(PackToTheFuture)
 
 ### Introduction
 
-Everyone creates their own branch and edits their section. Joshua will do the introduction.
+The **`PackToTheFuture`** package is designed to streamline data-science workflows related to the Central Dogma of Molecular Biology applied in a bioinformatics contexts. Specifically, it provides five functions and one data object:
+
+-   function 1 –\> `create_seq()`
+
+-   function 2 –\> `get_rna()`
+
+-   function 3 –\> `get_codons()`
+
+-   function 4 –\> `traduction_prot()`
+
+-   function 5 –\> `plot_base_seq()`
+
+-   data object -\> `genetic_code`
+
+In the following, we will go through each function in the package one by one and show how to use them together in a workflow. Finally we discuss typical use cases and potential future enhancements.
 
 ### Function 1 (`create_seq()`)
 
@@ -89,9 +103,41 @@ rna_seq: the RNA sequence string
 get_rna("ACTG")
 ```
 
-### Function 3
+### Function 3: `get_codons()`
 
-Joshua types here.
+The `get_codons()` function takes a DNA sequence `seq` and splits it into triplet (codon) sections. The reading frame (starting position) is determined by the `start` argument. The generated codons can later be used to translate to amino acids.
+
+```{r}
+get_codons <- function(seq, start = 1){
+  seq_len <- nchar(seq)
+  codons <- substring(seq,
+                      first = seq(from = start, to = seq_len-3+1, by = 3),
+                      last = seq(from = 3+start-1, to = seq_len, by = 3))
+  return(codons)
+}
+```
+
+**Example usage:**
+
+```{r}
+DNAseq <- "ATGGCCATTGTAATGGGCCGCTGAAAGGGTGCCCGATAG" 
+
+# example 1: no reading frame is defined: start = 1 by default
+codons_example1 <- get_codons(DNAseq)
+#> [1] "ATG" "GCC" "ATT" "GTA" "ATG" "GGC" "CGC" "TGA" "AAG" "GGT" "GCC" "CGA" "TAG"
+
+# example 2: shift the reading frame by one base: start = 2
+codons_example2 <- get_codons(DNAseq, start = 2)
+#> [1] "TGG" "CCA" "TTG" "TAA" "TGG" "GCC" "GCT" "GAA" "AGG" "GTG" "CCC" "GAT"
+```
+
+This function is particularly useful in bioinformatics workflows for:
+
+-   Translating nucleotide sequences into amino acids (after codon extraction).
+
+-   Exploring open reading frames (ORFs).
+
+-   Checking for mutations that shift reading frames.
 
 ### Function 4 (`traduction_prot()`)
 
