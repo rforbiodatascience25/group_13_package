@@ -60,7 +60,7 @@ A character string representing a DNA sequence.
 
 #### Example usage
 
-```         
+``` r
 # Generate a sequence of length 12
 seq1 <- create_seq(12)
 seq1
@@ -68,7 +68,7 @@ seq1
 
 Expected output format:
 
-```         
+``` r
 "ATGCGTACGTTA"
 ```
 
