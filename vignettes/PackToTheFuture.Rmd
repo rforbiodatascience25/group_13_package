@@ -1,6 +1,6 @@
 ---
 title: "PackToTheFuture"
-output: rmarkdown::html_vignette
+output: rmarkdown::pdf_document
 vignette: >
   %\VignetteIndexEntry{PackToTheFuture}
   %\VignetteEngine{knitr::rmarkdown}
