@@ -197,3 +197,7 @@ ggplot barplot with the counts per nucleotide
 plot_base_seq("AGCTAGCTAGCTCGGTTTCGTAGCTCATGC")
 plot_base_seq("AUCGAUGGCUAGGCUGUAGCGAUACGUAGCGAUGCUA")
 ```
+
+### Possible Use Cases
+
+Elvin types here: "As a final section, discuss use cases for the package and what other functions could be included."
