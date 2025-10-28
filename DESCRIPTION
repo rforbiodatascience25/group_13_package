@@ -6,7 +6,7 @@ Authors@R: c(
     person(given = "Joshua", 
            family = "Lembeck", 
            email = "joshinsky@outlook.de", 
-           role = c("aut", "cre"))
+           role = c("aut", "cre")))
 Description: The aim of these exercises is to set up a collaborative coding project using GitHub and collaborate on creating a simple R package that replicates the central dogma of molecular biology.
 License: usethis::use_mit_license("group13")
 Encoding: UTF-8
