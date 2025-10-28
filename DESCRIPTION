@@ -11,3 +11,5 @@ Description: The aim of these exercises is to set up a collaborative coding proj
 License: usethis::use_mit_license("group13")
 Encoding: UTF-8
 LazyData: true
+Depends: 
+    R (>= 3.5)
