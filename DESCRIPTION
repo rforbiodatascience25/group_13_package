@@ -1,16 +1,18 @@
 Package: PackToTheFuture
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Central Dogma of Molecular Biology
 Version: 0.1.0
-Authors@R: c(
-    person(
-      "Jane", "Doe",
-      email = "jane@example.com",
-      role = c("aut", "cre")
-    )
+Authors@R: 
+c(person(given = "Joshua",
+family = "Lembeck",
+email = "s253726@dtu.dk",
+role = c("aut", "cre")),
+person(given = "Ákos",
+family = "Kimpián",
+email = "s253718@dtu.dk",
+role = "aut")
   )
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
-License: What license is it under?
+Description: The aim of these exercises is to set up a collaborative coding project using GitHub and collaborate on creating a simple R package that replicates the central dogma of molecular biology.
+License: usethis::use_mit_license("group13")
 Encoding: UTF-8
 LazyData: true
