@@ -40,7 +40,7 @@ Joshua types here.
 
 Function definition:
 
-```{r}
+``` r
 create_seq <- function(seq_size){
   seq_list <- sample(c("A", "T", "G", "C"), size = seq_size, replace = TRUE)
   seq_str <- paste0(seq_list, collapse = "")
