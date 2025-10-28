@@ -1,5 +1,8 @@
 #' Plot Nucleotide Frequence from Sequence
 #'
+#' @importFrom ggplot2 ggplot aes geom_col theme_bw theme
+#' @importFrom stringr str_split boundary str_count
+#'
 #' @param seq: sequence of ribonucleotides or desoxirebonucleotides as a string.
 #'
 #' @returns bar plot with the absolute frequencies (counts) of the input sequence.
