@@ -2,7 +2,6 @@ Package: PackToTheFuture
 Type: Package
 Title: Central Dogma of Molecular Biology
 Version: 0.1.0
-<<<<<<< HEAD
 Authors@R: c(
     person(given = "Joshua", 
            family = "Lembeck", 
