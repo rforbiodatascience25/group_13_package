@@ -74,6 +74,20 @@ Expected output format:
 
 Each call produces a new random sequence of the same general format.
 
-### Function 5
+### Function 5: plot_base_freq
 
-Mikel types here.
+A function that takes a sequence of nucleotides (DNA or RNA) and plots the number of occurences of each nucleotide in a barplot.
+
+#### Parameters
+
+seq: sequence of nucleotides as a string
+
+#### Returns
+
+ggplot barplot with the counts per nucleotide
+
+#### Example usage
+```{r}
+plot_base_seq("AGCTAGCTAGCTCGGTTTCGTAGCTCATGC")
+plot_base_seq("AUCGAUGGCUAGGCUGUAGCGAUACGUAGCGAUGCUA")
+```
