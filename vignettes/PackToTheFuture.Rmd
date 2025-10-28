@@ -34,9 +34,45 @@ Elvin types here.
 
 Joshua types here.
 
-### Function 4
+### Function 4 (`create_seq()`)
 
-Marcel types here.
+*Purpose*: Generate a random sequence composed of nucleotides A, T, G, and C.
+
+Function definition:
+
+```{r}
+create_seq <- function(seq_size){
+  seq_list <- sample(c("A", "T", "G", "C"), size = seq_size, replace = TRUE)
+  seq_str <- paste0(seq_list, collapse = "")
+  return(seq_str)
+}
+```
+
+#### Parameters
+
+| Argument |  Type   |            Description             |
+|:--------:|:-------:|:----------------------------------:|
+| seq_size | numeric | Length of the sequence to generate |
+
+#### Returns
+
+A character string representing a DNA sequence.
+
+#### Example usage
+
+```         
+# Generate a sequence of length 12
+seq1 <- create_seq(12)
+seq1
+```
+
+Expected output format:
+
+```         
+"ATGCGTACGTTA"
+```
+
+Each call produces a new random sequence of the same general format.
 
 ### Function 5
 
