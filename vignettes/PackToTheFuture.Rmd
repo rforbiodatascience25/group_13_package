@@ -22,19 +22,7 @@ library(PackToTheFuture)
 
 Everyone creates their own branch and edits their section. Joshua will do the introduction.
 
-### Function 1
-
-Ákos types here.
-
-### Function 2
-
-Elvin types here.
-
-### Function 3
-
-Joshua types here.
-
-### Function 4 (`create_seq()`)
+### Function 1 (`create_seq()`)
 
 *Purpose*: Generate a random sequence composed of nucleotides A, T, G, and C.
 
@@ -73,6 +61,52 @@ Expected output format:
 ```
 
 Each call produces a new random sequence of the same general format.
+
+### Function 2
+
+Elvin types here.
+
+### Function 3
+
+Joshua types here.
+
+### Function 4 (```traduction_prot()```)
+
+*Purpose*: Translate a vector of codons into a protein sequence using a predefined genetic code.
+
+Function definition:
+
+``` r
+traduction_prot <- function(codons){
+  prot_seq <- paste0(genetic_code[codons], collapse = "")
+  return(prot_seq)
+}
+```
+
+
+#### Parameters
+
+| Argument |  Type   |            Description             |
+|:--------:|:-------:|:----------------------------------:|
+| codons | character vector (of RNA codons) | The codon sequence to translate |
+
+
+#### Returns 
+A concatenated protein string.
+
+#### Example usage
+
+``` r
+cod_vec <- c("AUG", "ACG", "AAG")
+traduction_prot(cod_vec)
+
+``` 
+
+#### Output:
+
+```r 
+"MTK"
+```
 
 ### Function 5: plot_base_freq
 
