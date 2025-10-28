@@ -18,3 +18,6 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+Imports: 
+    ggplot2 (>= 3.5.1),
+    stringr (>= 1.5.1)

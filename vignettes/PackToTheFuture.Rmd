@@ -36,13 +36,72 @@ The **`PackToTheFuture`** package is designed to streamline data-science workflo
 
 In the following, we will go through each function in the package one by one and show how to use them together in a workflow. Finally we discuss typical use cases and potential future enhancements.
 
-### Function 1
+### Function 1 (`create_seq()`)
 
-Ákos types here.
+*Purpose*: Generate a random sequence composed of nucleotides A, T, G, and C.
+
+Function definition:
+
+``` r
+create_seq <- function(seq_size){
+  seq_list <- sample(c("A", "T", "G", "C"), size = seq_size, replace = TRUE)
+  seq_str <- paste0(seq_list, collapse = "")
+  return(seq_str)
+}
+```
+
+#### Parameters
+
+| Argument |  Type   |            Description             |
+|:--------:|:-------:|:----------------------------------:|
+| seq_size | numeric | Length of the sequence to generate |
+
+#### Returns
+
+A character string representing a DNA sequence.
+
+#### Example usage
+
+``` r
+# Generate a sequence of length 12
+seq1 <- create_seq(12)
+seq1
+```
+
+Expected output format:
+
+``` r
+"ATGCGTACGTTA"
+```
+
+Each call produces a new random sequence of the same general format.
 
 ### Function 2
 
-Elvin types here.
+This function takes a DNA sequence and converts it into an RNA sequence by replacing "T" with "U".
+
+#### Function definition
+
+```{r}
+get_rna <- function(dna_seq){
+  rna_seq <- gsub("T", "U", dna_seq)
+  return(rna_seq)
+}
+```
+
+#### Parameters
+
+dna_seq: the DNA sequence string
+
+#### Returns
+
+rna_seq: the RNA sequence string
+
+#### Example usage
+
+```{r}
+get_rna("ACTG")
+```
 
 ### Function 3: `get_codons()`
 
@@ -80,14 +139,59 @@ This function is particularly useful in bioinformatics workflows for:
 
 -   Checking for mutations that shift reading frames.
 
-### Function 4
+### Function 4 (`traduction_prot()`)
 
-Marcel types here.
+*Purpose*: Translate a vector of codons into a protein sequence using a predefined genetic code.
 
-### Function 5
+Function definition:
 
-Mikel types here.
+``` r
+traduction_prot <- function(codons){
+  prot_seq <- paste0(genetic_code[codons], collapse = "")
+  return(prot_seq)
+}
+```
 
-### Possible use cases
+#### Parameters
 
-Who types here?
+| Argument |               Type               |           Description           |
+|:-------------:|:-------------:|:----------------------------------------:|
+|  codons  | character vector (of RNA codons) | The codon sequence to translate |
+
+#### Returns
+
+A concatenated protein string.
+
+#### Example usage
+
+``` r
+cod_vec <- c("AUG", "ACG", "AAG")
+traduction_prot(cod_vec)
+```
+
+#### Output:
+
+``` r
+"MTK"
+```
+
+### Function 5: plot_base_freq
+
+A function that takes a sequence of nucleotides (DNA or RNA) and plots the number of occurences of each nucleotide in a barplot.
+
+Packages are added in the DESCRIPTION file through `usethis::use_package()`. Also are added in the funcion's Roxygen Skeleton using importFrom and importing only the required function from the packages.
+
+#### Parameters
+
+seq: sequence of nucleotides as a string
+
+#### Returns
+
+ggplot barplot with the counts per nucleotide
+
+#### Example usage
+
+```{r}
+plot_base_seq("AGCTAGCTAGCTCGGTTTCGTAGCTCATGC")
+plot_base_seq("AUCGAUGGCUAGGCUGUAGCGAUACGUAGCGAUGCUA")
+```
