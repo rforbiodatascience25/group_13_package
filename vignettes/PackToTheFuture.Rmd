@@ -20,6 +20,8 @@ library(PackToTheFuture)
 
 ### Introduction
 
+The package can be found in this GitHub repository: <https://github.com/rforbiodatascience25/group_13_package/tree/main>
+
 The **`PackToTheFuture`** package is designed to streamline data-science workflows related to the Central Dogma of Molecular Biology applied in a bioinformatics contexts. Specifically, it provides five functions and one data object:
 
 -   function 1 –\> `create_seq()`
