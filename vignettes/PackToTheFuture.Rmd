@@ -20,7 +20,19 @@ library(PackToTheFuture)
 
 ### Introduction
 
-Everyone creates their own branch and edits their section. Joshua will do the introduction.
+The **`PackToTheFuture`** package is designed to streamline data-science workflows related to the Central Dogma of Molecular Biology applied in a bioinformatics contexts. Specifically, it provides the following functions:
+
+-   function 1 –\> `create_seq()`
+
+-   function 2 –\> `get_rna()`
+
+-   function 3 –\> `get_codons()`
+
+-   function 4 –\> `traduction_prot()`
+
+-   function 5 –\> `plot_base_seq()`
+
+In the following, we will go through each function in the package one by one and show how to use them together in a workflow. Finally we discuss typical use cases and potential future enhancements.
 
 ### Function 1
 
