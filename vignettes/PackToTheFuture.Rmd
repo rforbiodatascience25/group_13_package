@@ -64,13 +64,36 @@ Each call produces a new random sequence of the same general format.
 
 ### Function 2
 
-Elvin types here.
+This function takes a DNA sequence and converts it into an RNA sequence by replacing "T" with "U".
+
+#### Function definition
+
+```{r}
+get_rna <- function(dna_seq){
+  rna_seq <- gsub("T", "U", dna_seq)
+  return(rna_seq)
+}
+```
+
+#### Parameters
+
+dna_seq: the DNA sequence string
+
+#### Returns
+
+rna_seq: the RNA sequence string
+
+#### Example usage
+
+```{r}
+get_rna("ACTG")
+```
 
 ### Function 3
 
 Joshua types here.
 
-### Function 4 (```traduction_prot()```)
+### Function 4 (`traduction_prot()`)
 
 *Purpose*: Translate a vector of codons into a protein sequence using a predefined genetic code.
 
@@ -83,15 +106,14 @@ traduction_prot <- function(codons){
 }
 ```
 
-
 #### Parameters
 
-| Argument |  Type   |            Description             |
-|:--------:|:-------:|:----------------------------------:|
-| codons | character vector (of RNA codons) | The codon sequence to translate |
+| Argument |               Type               |           Description           |
+|:-------------:|:-------------:|:----------------------------------------:|
+|  codons  | character vector (of RNA codons) | The codon sequence to translate |
 
+#### Returns
 
-#### Returns 
 A concatenated protein string.
 
 #### Example usage
@@ -99,12 +121,11 @@ A concatenated protein string.
 ``` r
 cod_vec <- c("AUG", "ACG", "AAG")
 traduction_prot(cod_vec)
-
-``` 
+```
 
 #### Output:
 
-```r 
+``` r
 "MTK"
 ```
 
@@ -121,6 +142,7 @@ seq: sequence of nucleotides as a string
 ggplot barplot with the counts per nucleotide
 
 #### Example usage
+
 ```{r}
 plot_base_seq("AGCTAGCTAGCTCGGTTTCGTAGCTCATGC")
 plot_base_seq("AUCGAUGGCUAGGCUGUAGCGAUACGUAGCGAUGCUA")
